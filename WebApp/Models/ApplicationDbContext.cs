@@ -18,5 +18,7 @@ namespace WebApp.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Machine> Machine { get; set; }
+        public DbSet<OilConsumption> OilConsumption { get; set; }
     }
 }

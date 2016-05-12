@@ -8,7 +8,7 @@ namespace WebApp.Models
 {
     public static class ExtenstionMethod
     {
-        public static int TotalQuantity(this Production production)
+        public static int TotalQuantity(this TestProduction production)
         {
             int totalQuantity = 0;
             foreach (Product newProduct in production.Products)
