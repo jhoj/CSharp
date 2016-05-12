@@ -7,8 +7,8 @@ namespace WebApp.Models
 {
     public class RecommendedOilConsumption
     {
-        public int Id { get; }
-        public string ProductMix { get; }
+        public int Id { get; set; }
+        public string ProductMix { get; set; }
         public float Recommendation { get; set; }
     }
 }

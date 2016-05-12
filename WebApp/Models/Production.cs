@@ -7,10 +7,10 @@ namespace WebApp.Models
 {
     public class Production
     {
-        public int Id { get; }
-        public int MachineId { get; }
-        public int ProductId { get; }
-        public DateTime recorded { get; }
+        public int Id { get; set; }
+        public int MachineId { get; set; }
+        public int ProductId { get; set; }
+        public DateTime recorded { get; set; }
 
     }
 }

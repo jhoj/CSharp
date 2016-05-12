@@ -8,9 +8,10 @@ using WebApp.Models;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160512091437_AllModelClasses")]
+    partial class AllModelClasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -196,18 +197,6 @@ namespace WebApp.Migrations
                     b.Property<int>("ProductId");
 
                     b.Property<DateTime>("recorded");
-
-                    b.HasKey("Id");
-                });
-
-            modelBuilder.Entity("WebApp.Models.RecommendedOilConsumption", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ProductMix");
-
-                    b.Property<float>("Recommendation");
 
                     b.HasKey("Id");
                 });

@@ -20,5 +20,7 @@ namespace WebApp.Models
         public DbSet<Product> Product { get; set; }
         public DbSet<Machine> Machine { get; set; }
         public DbSet<OilConsumption> OilConsumption { get; set; }
+        public DbSet<Production> Production { get; set; }
+        public DbSet<RecommendedOilConsumption> RecommendedOilConsumption { get; set; }
     }
 }
