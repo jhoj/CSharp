@@ -16,9 +16,15 @@ namespace WebApp.Controllers
         }
 
         // GET: RecommendedOilConsumptions
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
-            return View(_context.RecommendedOilConsumption.ToList());
+            var productMix = from p in _context.RecommendedOilConsumption
+                           select p;
+            if (!string.IsNullOrEmpty(search))
+            {
+                productMix = productMix.Where(s => s.ProductMix.Contains(search));
+            }
+            return View(productMix);
         }
 
         // GET: RecommendedOilConsumptions/Details/5

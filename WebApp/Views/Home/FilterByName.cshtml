@@ -3,14 +3,38 @@
 }
 <h2>@ViewData["Title"].</h2>
 
-<address>
-    FilterByName<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+ public static IEnumerable<Product> <br />
+    FilterByName(this IEnumerable<Product> product, string name) <br />
+{<br />
+    foreach (Product newProduct in product)<br />
+    {<br />
+      if (newProduct.Name == name)<br />
+      {<br />
+        yield return newProduct;<br />
+      }<br />
+    }<br />
+}<br />
+                                     <br />
+    public ViewResult FilterByName()<br />
+    {<br />
+    TestProduction test = new TestProduction<br />
+    {<br />
+    Products = new List<Product> <br />
+        {<br />
+        new Product { Name = "TestProduct", Number = 1, Quantity = 100 }, <br />
+        new Product { Name = "TestProduct", Number = 2, Quantity = 13 }, <br />
+        new Product { Name = "Product 3", Number = 3, Quantity = 1223 }, <br />
+        new Product { Name = "Product 4", Number = 4, Quantity = 432 } <br />
+        }<br />
+        };<br />
+        decimal totalQuantity = 0; <br />
+        foreach (Product product in test.Products.FilterByName("TestProduct"))<br />
+        {<br />
+        totalQuantity += product.Quantity;<br />
+        }<br />
+                           <br />
+        ViewData["FilterByName"] = String.Format("Total Quantity: {0}", totalQuantity);<br />
+        return View();<br />
+        }<br />
+                           <br />
+RESULT: @ViewData["FilterByName"];

@@ -16,9 +16,15 @@ namespace WebApp.Controllers
         }
 
         // GET: Products
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
-            return View(_context.Product.ToList());
+            var products = from p in _context.Product
+                           select p;
+            if (!string.IsNullOrEmpty(search))
+            {
+                products = products.Where(s => s.Name.Contains(search));
+            }
+            return View(products);
         }
 
         // GET: Products/Details/5

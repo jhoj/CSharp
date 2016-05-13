@@ -108,6 +108,8 @@ namespace WebApp
                     name: "default",
                     template: "{controller=Products}/{action=Index}/{id?}");
             });
+
+            SeedData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.

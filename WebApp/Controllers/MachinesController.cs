@@ -16,9 +16,15 @@ namespace WebApp.Controllers
         }
 
         // GET: Machines
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
-            return View(_context.Machine.ToList());
+            var machines = from m in _context.Machine
+                           select m;
+            if (!string.IsNullOrEmpty(search))
+            {
+                machines = machines.Where(s => s.Name.Contains(search));
+            }
+            return View(machines);
         }
 
         // GET: Machines/Details/5

@@ -3,14 +3,35 @@
 }
 <h2>@ViewData["Title"].</h2>
 
-<address>
-    ExtensionMethod<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+public static class ExtenstionMethod<br />
+    {<br />
+        public static int TotalQuantity(this TestProduction production)<br />
+        {<br />
+            int totalQuantity = 0;<br />
+            foreach (Product newProduct in production.Products)<br />
+            {<br />
+                totalQuantity += newProduct.Quantity;<br />
+            }<br />
+            return totalQuantity;<br />
+        }<br />
+<br />
+<br />
+public ViewResult ExtensionMethod()<br />
+        {<br />
+            TestProduction test = new TestProduction { Products = new List<Product><br />
+    {<br />
+    new Product { Name = "Product 1", Number = 1, Quantity = 100 },<br />
+    new Product { Name = "Product 2", Number = 2, Quantity = 13 },<br />
+    new Product { Name = "Product 3", Number = 3, Quantity = 1223 },<br />
+    new Product { Name = "Product 4", Number = 4, Quantity = 432 }<br />
+    } };<br />
+                                                                              <br />
+    // get the total value of the products in the cart<br />
+    decimal productionQuantity = test.TotalQuantity();<br />
+    ViewData["ExtensionMethod"] = String.Format("Total production quantity: {0:c}", productionQuantity);<br />
+    return View();<br />
+    }<br />
+                                                                              <br />
+    RESULT : <br />
+    @ViewData["ExtensionMethod"];

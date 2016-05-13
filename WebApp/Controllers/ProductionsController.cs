@@ -16,9 +16,15 @@ namespace WebApp.Controllers
         }
 
         // GET: Productions
-        public IActionResult Index()
+        public IActionResult Index(int machineId)
         {
-            return View(_context.Production.ToList());
+            var productions = from p in _context.Production
+                           select p;
+            if (machineId > 0)
+            {
+                productions = productions.Where(s => s.MachineId == machineId);
+            }
+            return View(productions);
         }
 
         // GET: Productions/Details/5

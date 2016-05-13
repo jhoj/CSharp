@@ -3,14 +3,23 @@
 }
 <h2>@ViewData["Title"].</h2>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+    public ViewResult Property()<br />
+    {<br />
+    Product myProduct = new Product();<br />
+    myProduct.Name = "Jakup";<br />
+    <br />
+    ViewData["Name"] = String.Format("Product name: {0}", myProduct.Name);<br />
+    return View();<br />
+    }<br />
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    // create a new Product object<br />
+    Product myProduct = new Product();<br />
+    // set the property value<br />
+    myProduct.Name = "Jakup";<br />
+    <br />
+    // generate the view<br />
+    ViewData["Name"] = String.Format("Product name: {0}", myProduct.Name);<br />
+    <br />
+    PASSED DATA:<br />
+    <br />
+    @ViewData["name"];

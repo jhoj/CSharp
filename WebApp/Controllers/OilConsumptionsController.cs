@@ -1,8 +1,9 @@
-using System.Linq;
 using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.Data.Entity;
+using System;
+using System.Linq;
 using WebApp.Models;
+using System.Data.Objects;
+using System.Data;
 
 namespace WebApp.Controllers
 {
@@ -18,7 +19,7 @@ namespace WebApp.Controllers
         // GET: OilConsumptions
         public IActionResult Index()
         {
-            return View(_context.OilConsumption.ToList());
+           return View(_context.OilConsumption.ToList());
         }
 
         // GET: OilConsumptions/Details/5
