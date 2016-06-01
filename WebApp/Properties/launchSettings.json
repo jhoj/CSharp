@@ -17,6 +17,8 @@
     },
     "web": {
       "commandName": "web",
+      "workingDirectory": "C:\\Users\\Jakup\\Desktop\\Solution\\WebApp",
+      "launchBrowser": true,
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }

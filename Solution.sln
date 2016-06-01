@@ -5,19 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApp", "WebApp\WebApp.xproj", "{BD2887B7-E842-424D-AE43-497DE45918A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70B591AF-B344-4CED-83D1-77C68F169135}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1DB88FD-E01F-4CF7-B1EA-385135C14AE4}"
-	ProjectSection(SolutionItems) = preProject
-		..\MvcMovie\global.json = ..\MvcMovie\global.json
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "..\Looknorth\Client\Client.csproj", "{59B81955-2E92-4DEC-9F9A-49FAB156578C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "..\Looknorth\Interfaces\Interfaces.csproj", "{83E81BB6-5CB2-4A75-8A26-40E841D014EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "..\Looknorth\Service\Service.csproj", "{62DA1538-7501-493D-BDDD-D8A065D126A5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,18 +15,6 @@ Global
 		{BD2887B7-E842-424D-AE43-497DE45918A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2887B7-E842-424D-AE43-497DE45918A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2887B7-E842-424D-AE43-497DE45918A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59B81955-2E92-4DEC-9F9A-49FAB156578C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59B81955-2E92-4DEC-9F9A-49FAB156578C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59B81955-2E92-4DEC-9F9A-49FAB156578C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59B81955-2E92-4DEC-9F9A-49FAB156578C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83E81BB6-5CB2-4A75-8A26-40E841D014EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83E81BB6-5CB2-4A75-8A26-40E841D014EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83E81BB6-5CB2-4A75-8A26-40E841D014EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83E81BB6-5CB2-4A75-8A26-40E841D014EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62DA1538-7501-493D-BDDD-D8A065D126A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62DA1538-7501-493D-BDDD-D8A065D126A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62DA1538-7501-493D-BDDD-D8A065D126A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62DA1538-7501-493D-BDDD-D8A065D126A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
